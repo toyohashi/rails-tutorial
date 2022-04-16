@@ -7,16 +7,23 @@ services:
       - .:/app
     ports:
       - 3000:3000
+    environment:
+      - DATABASE_USERNAME=postgres
+      - DATABASE_PASSWORD=password
+      - DATABASE_HOST=db
     depends_on:
       - db
     tty: true
     stdin_open: true
   db:
+    image: postgres
     platform: linux/x86_64
-    image: mysql:5.7
     volumes:
-      - db-volume:/var/lib/mysql
+      - ./tmp/db:/var/lib/postgresql/data
     environment:
-      MYSQL_ROOT_PASSWORD: password
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=password
+    ports:
+      - 5432:5432
 volumes:
   db-volume:
