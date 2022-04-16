@@ -1,19 +1,24 @@
 # README
-## このリポジトリについて
-- rails tutorialアウトプット用のリポジトリです。
 
-## 使い方
-### 環境構築
-```
-docker-compose run app rails new . --force --no-deps --database=postgresql
-docker-compose build
-docker-compose up
-docker-compose run app rails db:create
-```
+This README would normally document whatever steps are necessary to get the
+application up and running.
 
-### コンテナの立ち上げ・コンテナに入る場合
-```
-docker-compose up
-docker exec -it rails_tutorial_app_1 /bin/bash
-```
+Things you may want to cover:
 
+* Ruby version
+
+* System dependencies
+
+* Configuration
+
+* Database creation
+
+* Database initialization
+
+* How to run the test suite
+
+* Services (job queues, cache servers, search engines, etc.)
+
+* Deployment instructions
+
+* ...

@@ -1,3 +1,5 @@
+
+   
 default: &default
   adapter: postgresql
   encoding: unicode
@@ -8,8 +10,8 @@ default: &default
 
 development:
   <<: *default
-  database: s_ochi_development
+  database: k_nguyen_development
 
 test:
   <<: *default
-  database: s_ochi_test
+  database: k_nguyen_test
